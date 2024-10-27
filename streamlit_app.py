@@ -26,7 +26,7 @@ def get_gemini_response(question):
 ##Function to load Gemini Pro vision Model 
 def get_gemini_vision_response(uploaded_image,txt_input):
     
-    model=genai.GenerativeModel("gemini-pro-vision")
+    model=genai.GenerativeModel("gemini-1.5-flash")
     chat = model.start_chat(history=[])
     img = PIL.Image.open(uploaded_image)
     response = model.generate_content([txt_input,img])
