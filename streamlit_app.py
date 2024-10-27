@@ -16,7 +16,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 ## function to load Gemini Pro model and get repsonses
 def get_gemini_response(question):
-    model=genai.GenerativeModel("gemini-pro")
+    model=genai.GenerativeModel("gemini-1.5-flash")
     chat = model.start_chat(history=[])
     response=chat.send_message(question)
     # Uncomment the below line if you want to stream the conversation 
